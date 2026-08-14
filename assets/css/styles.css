@@ -331,6 +331,30 @@ h3 { font-size: clamp(1.12rem, 1.7vw, 1.33rem); font-weight: 600; }
 }
 @keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
 
+/* Cabeçalho reduzido das páginas internas: um único link, sem menu retrátil.
+   Sem este bloco, a regra off-canvas de ≤1080px empurra a navegação para fora
+   da tela — e como essas páginas não têm botão hambúrguer, o link fica
+   inalcançável pelo mouse e, pior, ainda focalizável pelo teclado. */
+.site-header--simples .site-nav {
+  position: static;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  gap: 0;
+  padding: 0;
+  background: none;
+  border-left: 0;
+  box-shadow: none;
+  transform: none;
+  overflow: visible;
+}
+.site-header--simples .nav-list { flex-direction: row; }
+.site-header--simples .nav-list a {
+  display: inline-block;
+  padding: 6px 0;
+  font-size: .93rem;
+}
+
 /* ---------- 6. Hero ---------- */
 .hero {
   position: relative;
