@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Logotipo DMDP — De Mãos Dadas com os Pais e Professores">
+  <title>DMDP — De Mãos Dadas com os Pais/Professores</title>
+  <defs>
+    <style>
+      .ln-azul { fill: none; stroke: #1F4360; stroke-linecap: round; stroke-linejoin: round; }
+      .ln-verde { fill: none; stroke: #86AB8D; stroke-linecap: round; stroke-linejoin: round; }
+      .tx-azul { fill: #1F4360; font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
+      .tx-verde { fill: #86AB8D; font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Anel institucional -->
+  <circle cx="200" cy="200" r="188" class="ln-azul" stroke-width="9"/>
+
+  <!-- Braço/mão que vem da esquerda (sálvia) -->
+  <path class="ln-verde" stroke-width="13" d="M 62 232 C 86 150 150 108 214 124"/>
+  <!-- Braço/mão que vem da direita (azul) -->
+  <path class="ln-azul" stroke-width="13" d="M 338 232 C 314 150 250 108 186 124"/>
+
+  <!-- Aperto de mãos: polegar sobreposto -->
+  <path class="ln-azul" stroke-width="13" d="M 186 124 C 214 132 236 152 246 178"/>
+  <!-- Dedos que envolvem a outra mão -->
+  <path class="ln-verde" stroke-width="12" d="M 150 176 C 180 168 210 178 228 200"/>
+  <path class="ln-verde" stroke-width="12" d="M 146 204 C 176 196 204 206 220 226"/>
+
+  <!-- Tipografia -->
+  <text x="200" y="304" text-anchor="middle" class="tx-azul" font-size="66" font-weight="400" letter-spacing="2">DMDP</text>
+  <text x="200" y="336" text-anchor="middle" class="tx-azul" font-size="25" font-weight="700" letter-spacing="1">DE MÃOS DADAS</text>
+  <text x="200" y="360" text-anchor="middle" class="tx-verde" font-size="16" font-weight="500" letter-spacing="0.6">COM OS PAIS/PROFESSORES</text>
+</svg>
