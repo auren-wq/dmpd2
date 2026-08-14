@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://metodo-dmdp-auren16.vercel.app/sitemap.xml
