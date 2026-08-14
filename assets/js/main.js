@@ -15,12 +15,28 @@
   var reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- Menu mobile ---------- */
+  // Enquanto o menu está aberto, o conteúdo atrás dele sai da ordem de
+  // tabulação e do leitor de tela — senão o foco escapa por baixo da sobreposição.
+  var regioesDeFundo = [
+    document.querySelector('main'),
+    document.querySelector('.site-footer'),
+    whatsFloat
+  ].filter(Boolean);
+
+  function alternarFundo(inativo) {
+    regioesDeFundo.forEach(function (el) {
+      if (inativo) el.setAttribute('inert', '');
+      else el.removeAttribute('inert');
+    });
+  }
+
   function abrirMenu() {
     navMenu.classList.add('is-open');
     navToggle.setAttribute('aria-expanded', 'true');
     navToggle.setAttribute('aria-label', 'Fechar menu de navegação');
     backdrop.hidden = false;
     document.body.style.overflow = 'hidden';
+    alternarFundo(true);
   }
 
   function fecharMenu() {
@@ -29,6 +45,7 @@
     navToggle.setAttribute('aria-label', 'Abrir menu de navegação');
     backdrop.hidden = true;
     document.body.style.overflow = '';
+    alternarFundo(false);
   }
 
   function menuAberto() {
