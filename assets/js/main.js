@@ -70,8 +70,10 @@
       }
     });
 
-    // Fecha o menu ao voltar para o layout desktop
-    var mqDesktop = window.matchMedia('(min-width: 961px)');
+    // Fecha o menu ao voltar para o layout desktop.
+    // Precisa casar com o breakpoint do CSS (max-width: 1080px): se ficar
+    // dessincronizado, o menu segue "aberto" e a página trava com inert.
+    var mqDesktop = window.matchMedia('(min-width: 1081px)');
     var aoMudarLargura = function (e) { if (e.matches && menuAberto()) fecharMenu(); };
     if (mqDesktop.addEventListener) mqDesktop.addEventListener('change', aoMudarLargura);
     else if (mqDesktop.addListener) mqDesktop.addListener(aoMudarLargura);
