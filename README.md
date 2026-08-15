@@ -1,4 +1,4 @@
-# Método DMDP — Landing page institucional
+# Projeto DMDP — Landing page institucional
 
 Site estático de página única, sem frameworks e sem dependências de build.
 
