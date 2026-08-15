@@ -375,7 +375,9 @@ h3 { font-size: clamp(1.12rem, 1.7vw, 1.33rem); font-weight: 600; }
     linear-gradient(180deg, rgba(31, 67, 96, .5) 0%, rgba(22, 50, 74, .72) 100%);
 }
 
-.hero h1 { color: #fff; margin-bottom: .48em; max-width: 860px; text-wrap: balance; }
+/* O limite acomoda "De Mãos Dadas com os Pais/Professores" numa linha só
+   no desktop (a linha pede ~900px); abaixo disso o título quebraria em três. */
+.hero h1 { color: #fff; margin-bottom: .48em; max-width: 960px; text-wrap: balance; }
 .hero-sub {
   font-size: clamp(1.04rem, 1.55vw, 1.22rem);
   color: rgba(255, 255, 255, .88);
